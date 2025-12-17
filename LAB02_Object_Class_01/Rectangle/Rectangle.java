@@ -2,19 +2,19 @@
 package LAB02_Object_Class_01.Rectangle;
 
 public class Rectangle {
-    private double height;
-    private double width;
+    private float height;
+    private float width;
 
-    public Rectangle(double height, double width) {
+    public Rectangle(float height, float width) {
         this.height = height;
         this.width = width;
     }
 
-    public double getHeight() {
+    public float getHeight() {
         return height;
     }
 
-    public double getWidth() {
+    public float getWidth() {
         return width;
     }
 
@@ -26,12 +26,12 @@ public class Rectangle {
         this.width = width;
     }
 
-    public void calArea(double height, double width) {
-        double area = getWidth() * getHeight();
+    public void calArea(float height, float width) {
+        float area = getWidth() * getHeight();
         System.out.println(area);
     }
 
-    public void calPerimeter(double height, double width) {
+    public void calPerimeter(float height, float width) {
         double perimeter = 2 * (getWidth() + getHeight());
         System.out.println(perimeter);
     }
