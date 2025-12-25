@@ -5,14 +5,21 @@ public class WrapperDemo {
         // Max/Min Values
         System.out.println("Maximum possible for int: " + Integer.MAX_VALUE);
         System.out.println("Minimum possible for double: " + Double.MIN_VALUE);
+
+        System.out.println("------------------------------");
         // String to Wrapper Object
         Integer intNum = Integer.valueOf("500");
         Double doubleNum = Double.valueOf("123.45");
+
         // Unboxing/Conversion
+        System.out.println("Integer value: " + intNum);
         System.out.println("Double converted to int: " + doubleNum.intValue());
+
+        System.out.println("------------------------------");
         // Parsing
         int parsedInt = Integer.parseInt("1999");
         System.out.println("Parsed int: " + parsedInt);
+        System.out.println("------------------------------");
     }
 }
     // Max/Min Values
