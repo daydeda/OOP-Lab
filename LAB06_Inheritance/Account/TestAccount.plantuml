@@ -30,16 +30,4 @@ class SavingAccount {
 Account <|-- CheckingAccount
 Account <|-- SavingAccount
 
-note right of Account
-  Source: Account/Account.java
-end note
-
-note right of CheckingAccount
-  Source: Account/CheckingAccount.java
-end note
-
-note right of SavingAccount
-  Source: Account/SavingAccount.java
-end note
-
 @enduml
