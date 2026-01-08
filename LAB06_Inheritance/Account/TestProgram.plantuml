@@ -1,75 +1,45 @@
-@startuml
-' Account base class
+@startuml AccountPackage
+
 class Account {
   - name: String
   - id: int
   - balance: double
   - annualInterestRate: double
   - dateCreated: Date
-  - {static} idCounter: int = 1000
+  - {static} idCounter: int
   + Account(name: String)
-  + deposit(amount: double): void
-  + withdraw(amount: double): void
+  + deposit(amount: double)
+  + withdraw(amount: double)
   + getBalance(): double
-  + setBalance(balance: double): void
+  + setBalance(balance: double)
   + toString(): String
 }
 
-' CheckingAccount subclass
 class CheckingAccount {
-  - overdraftLimit: double = 5000
   + CheckingAccount(name: String)
-  + withdraw(amount: double): void
-  + toString(): String
+  + withdraw(amount: double)
 }
 
-' SavingAccount subclass
 class SavingAccount {
-  - count: int = 0
-  - {final} LIMIT: int = 5
+  - count: int
+  - {final} LIMIT: int
   + SavingAccount(name: String)
-  + withdraw(amount: double): void
-  + toString(): String
+  + withdraw(amount: double)
 }
 
-CheckingAccount --|> Account
-SavingAccount --|> Account
-@enduml
-```// filepath: /Users/day/Library/Mobile Documents/com~apple~CloudDocs/04_StudyDoc/ComLab/2:68/Midterm/LAB06_Inheritance/Account/TestProgram.plantuml
-@startuml
-' Account base class
-class Account {
-  - name: String
-  - id: int
-  - balance: double
-  - annualInterestRate: double
-  - dateCreated: Date
-  - {static} idCounter: int = 1000
-  + Account(name: String)
-  + deposit(amount: double): void
-  + withdraw(amount: double): void
-  + getBalance(): double
-  + setBalance(balance: double): void
-  + toString(): String
-}
+Account <|-- CheckingAccount
+Account <|-- SavingAccount
 
-' CheckingAccount subclass
-class CheckingAccount {
-  - overdraftLimit: double = 5000
-  + CheckingAccount(name: String)
-  + withdraw(amount: double): void
-  + toString(): String
-}
+note right of Account
+  Source: Account/Account.java
+end note
 
-' SavingAccount subclass
-class SavingAccount {
-  - count: int = 0
-  - {final} LIMIT: int = 5
-  + SavingAccount(name: String)
-  + withdraw(amount: double): void
-  + toString(): String
-}
+note right of CheckingAccount
+  Source: Account/CheckingAccount.java
+end note
 
-CheckingAccount --|> Account
-SavingAccount --|> Account
+note right of SavingAccount
+  Source: Account/SavingAccount.java
+end note
+
 @enduml

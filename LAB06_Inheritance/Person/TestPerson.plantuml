@@ -53,8 +53,4 @@ Person <|-- Employee
 Employee <|-- Faculty
 Employee <|-- Staff
 
-note right of Person
-  See source: Person/Person.java
-end note
-
 @enduml
