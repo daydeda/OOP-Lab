@@ -25,12 +25,17 @@ public class SavingAccount extends Account {
         // Process successful withdrawal
         super.withdraw(amount);
         count++;
+
+        System.out.println(count);
+        System.out.println(getBalance());
     }
 
-    @Override
-    public String toString() {
-        return "Account Type: Savings Account\n" +
-            "Withdrawals this month: " + this.count + "\n" +
-            super.toString();
-    }
+    /*
+     * @Override
+     * public String toString() {
+     * return "Account Type: Savings Account\n" +
+     * "Withdrawals this month: " + this.count + "\n" +
+     * super.toString();
+     * }
+     */
 }

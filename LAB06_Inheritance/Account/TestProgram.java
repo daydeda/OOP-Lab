@@ -8,6 +8,11 @@ public class TestProgram {
         CheckingAccount checkAcc = new CheckingAccount("Albert");
         checkAcc.deposit(3000);
         checkAcc.withdraw(1000);
+        checkAcc.withdraw(10);
+        checkAcc.withdraw(10);
+        checkAcc.withdraw(10);
+        checkAcc.withdraw(10);
+        checkAcc.withdraw(10);
 
         // 3. Create a saving account
         SavingAccount saveAcc = new SavingAccount("Galileo");
