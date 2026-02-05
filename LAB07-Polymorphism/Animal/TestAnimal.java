@@ -1,5 +1,3 @@
-package Animal;
-
 public class TestAnimal {
     public static void main(String[] args) {
         System.out.println("--- Testing Base Class ---");

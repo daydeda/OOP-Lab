@@ -1,0 +1,33 @@
+@startuml AccountPackage
+
+class Account {
+  - name: String
+  - id: int
+  - balance: double
+  - annualInterestRate: double
+  - dateCreated: Date
+  - {static} idCounter: int
+  + Account(name: String)
+  + deposit(amount: double)
+  + withdraw(amount: double)
+  + getBalance(): double
+  + setBalance(balance: double)
+  + toString(): String
+}
+
+class CheckingAccount {
+  + CheckingAccount(name: String)
+  + withdraw(amount: double)
+}
+
+class SavingAccount {
+  - count: int
+  - {final} LIMIT: int
+  + SavingAccount(name: String)
+  + withdraw(amount: double)
+}
+
+Account <|-- CheckingAccount
+Account <|-- SavingAccount
+
+@enduml

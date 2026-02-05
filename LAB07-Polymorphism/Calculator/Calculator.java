@@ -1,5 +1,3 @@
-package Calculator;
-
 public class Calculator {
     // Add two integers
     public int add(int a, int b) {
