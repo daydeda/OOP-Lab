@@ -1,0 +1,56 @@
+@startuml
+class Publication {
+  - publisher: String
+  - page_no: int
+  - price: double
+  - title: String
+  + Publication()
+  + Publication(publisher, page_no, price, title)
+  + getPublisher(): String
+  + getPage_no(): int
+  + getPrice(): double
+  + getTitle(): String
+  + setPage_no(int)
+  + setPrice(double)
+  + setPublisher(String)
+  + setTitle(String)
+  + pubPrint(): String
+}
+
+class Magazine {
+  - pub_unit: String
+  + Magazine()
+  + Magazine(publisher, page_no, price, title, pub_unit)
+  + getPub_unit(): String
+  + setPub_unit(String)
+  + pubPrint(): String
+}
+
+class Book {
+  - author: String
+  + Book()
+  + Book(author)
+  + Book(author, publisher, page_no, price, title)
+  + getAuthor(): String
+  + setAuthor(String)
+  + pubPrint(): String
+}
+
+class KidsMagazine {
+  - rec_age: int
+  + KidsMagazine()
+  + KidsMagazine(rec_age)
+  + KidsMagazine(rec_age, publisher, page_no, price, title)
+  + getRec_age(): int
+  + setRec_age(int)
+  + pubPrint(): String
+}
+
+class TestPublication
+
+Publication <|-- Magazine
+Publication <|-- Book
+Publication <|-- KidsMagazine
+TestPublication ..> Publication : uses
+
+@enduml
