@@ -1,0 +1,33 @@
+@startuml
+abstract class GeometricObject {
+    - String color
+    - boolean filled
+    - java.util.Date dateCreated
+    # GeometricObject()
+    # GeometricObject(color: String, filled: boolean)
+    + getColor(): String
+    + setColor(color: String): void
+    + isFilled(): boolean
+    + setFilled(filled: boolean): void
+    + getDateCreated(): java.util.Date
+    + toString(): String
+    + {abstract} getArea(): double
+    + {abstract} getPerimeter(): double
+}
+
+class Triangle {
+    - double side1
+    - double side2
+    - double side3
+    + Triangle()
+    + Triangle(side1: double, side2: double, side3: double)
+    + getSide1(): double
+    + getSide2(): double
+    + getSide3(): double
+    + getArea(): double
+    + getPerimeter(): double
+    + toString(): String
+}
+
+GeometricObject <|-- Triangle
+@enduml

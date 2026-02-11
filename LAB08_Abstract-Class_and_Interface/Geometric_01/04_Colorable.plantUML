@@ -1,0 +1,24 @@
+@startuml
+abstract class GeometricObject {
+    + {abstract} getArea(): double
+    + {abstract} getPerimeter(): double
+}
+
+interface Colorable {
+    + {abstract} howToColor(): void
+}
+
+class Square {
+    - double side
+    + Square()
+    + Square(side: double)
+    + getSide(): double
+    + setSide(side: double): void
+    + getArea(): double
+    + getPerimeter(): double
+    + howToColor(): void
+}
+
+GeometricObject <|-- Square
+Colorable <|.. Square
+@enduml

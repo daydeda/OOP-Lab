@@ -1,0 +1,25 @@
+@startuml
+class Circle {
+    - double radius
+    + Circle()
+    + Circle(radius: double)
+    + getRadius(): double
+    + setRadius(radius: double): void
+    + getArea(): double
+    + getPerimeter(): double
+    + toString(): String
+}
+
+interface "Comparable<ComparableCircle>" as Comparable {
+    + compareTo(o: ComparableCircle): int
+}
+
+class ComparableCircle {
+    + ComparableCircle(radius: double)
+    + compareTo(o: ComparableCircle): int
+    + toString(): String
+}
+
+Circle <|-- ComparableCircle
+Comparable <|.. ComparableCircle
+@enduml
